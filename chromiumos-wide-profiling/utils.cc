@@ -170,7 +170,8 @@ uint64_t GetSampleFieldsForEventType(uint32_t event_type,
   case PERF_RECORD_SAMPLE:
     break;
   default:
-    LOG(FATAL) << "Unknown event type " << event_type;
+    LOG(ERROR) << "Unknown event type " << event_type;
+    break;
   }
   return sample_type & mask;
 }

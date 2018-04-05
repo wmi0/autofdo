@@ -188,7 +188,7 @@ bool PerfParser::ProcessEvents() {
         break;
       default:
         LOG(ERROR) << "Unknown event type: " << event.header.type;
-        return false;
+        break;
     }
   }
   // Print stats collected from parsing.
